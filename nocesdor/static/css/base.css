@@ -1,0 +1,33 @@
+/*class .
+id #*/
+
+
+/* --- CSS basique --- */
+html{margin: 0 0 0 0; min-height: 100%; background-color: #fff;width: 100%;}
+body{margin: 0 0 0 0 ;min-height: 100%; background-color: #fff; position: absolute; top:0px; width: 100%;}
+p{padding: 0 50 0 50;}
+html,body,td,p,a {
+	font-family: "league", "Trebuchet MS", sans-serif;
+}
+a:link {
+	color: #000;
+	text-decoration: none;
+}
+a:visited {
+	text-decoration: none;
+	color: #000;
+}
+a:hover {
+	text-decoration: none;
+	color: #e31c23;
+}
+a:active {
+	text-decoration: none;
+	color: #000;
+}
+
+#clear { clear: both;}
+
+.error	{color:red;}
+
+footer{position:absolute; bottom:0; text-align: center; clear:both; width: 100% }
