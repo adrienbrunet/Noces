@@ -121,18 +121,6 @@ TEMPLATE_DIRS = (
     # Don't forget to use absolute paths, not relative paths.
 )
 
-JENKINS_TASKS = (
-    'django_jenkins.tasks.with_coverage',
-    'django_jenkins.tasks.django_tests',   # select one django or
-    #'django_jenkins.tasks.dir_tests'      # directory tests discovery
-    'django_jenkins.tasks.run_pep8',
-    'django_jenkins.tasks.run_pyflakes',
-    'django_jenkins.tasks.run_jslint',
-    'django_jenkins.tasks.run_csslint',
-    'django_jenkins.tasks.run_sloccount',
-    'django_jenkins.tasks.lettuce_tests',
-)
-
 INSTALLED_APPS = (
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -145,7 +133,6 @@ INSTALLED_APPS = (
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
     'inscrits',
-    'django_jenkins',
 )
 
 # A sample logging configuration. The only tangible logging

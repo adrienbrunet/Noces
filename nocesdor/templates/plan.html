@@ -1,5 +1,22 @@
 {% extends "base.html" %}
+{% block plan %}
+    class="active"
+{% endblock %}
 
 {% block content %}
-    Plan
+{% load static%}
+<br><br>
+    <center>
+    
+    <div style="width:650px;" align=justify>
+
+    Pour tout ceux qui ne connaissent pas encore Nouic, c'est un charmant village situé à une heure de Limoges.<br> Son site internet vaut le détour...<br> <a href='www.nouic.com'><b>Le site de Nouic</b></a> <hr>
+
+    Pour vous rendre sur les lieux, je ne saurais faire mieux que google maps pour vous indiquer votre chemin...<br>  <a href='maps.google.com'><b>Trouver votre itineraire</b></a> <hr>
+
+    Petit lien bonus pour briller lors de votre venue :<br> <a href='fr.wikipedia.org/wiki/Nouic‎'><b>Un peu de Wikipedia</b></a>
+    
+</div>
+<img src="{% static 'img/nouic.png' %}"/>
+</center>
 {% endblock %}

@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block inscrit %}
+    class="active"
+{% endblock %}
+
+{% block content %}
+<br><br>
+<center>
+<div style="width:650px;" align=justify>
+<form action="" method="post">
+{% csrf_token %}
+
+{% if form.errors %}<p style="color:red;">Veuillez corriger svp les erreurs suivantes : {{ form.errors }}</p>{% endif %}
+
+Pour répondre à l'invitation, veuillez remplir le formulaire suivant en indiquant : votre nom de famille (ou un surnom pour que l'on vous reconnaisse), le nombre de personnes qui seront présentes (au moins une approximation) et à quels évenements vous prendrez part.
+
+<p style="color:grey;">Exemple de nom de famille :<br>Nom: Desset-Haetty, Sophie Stephane et enfants<br> En effet, comme nous partageons pour certains les mêmes noms, il faut essayer de minimiser les confusions...</p>
+
+<hr>
+Nom de votre Famille : {{ form.FamilyName }}<br>
+Nombre de personnes : {{ form.NbPersonneFamille }}<br>
+Cochez les cases suivantes pour comfirmez votre présence:<br>
+
+- Présence aux noces d'or {{ form.PresenceNoce }}<br>
+- Présence à la Fête de famille {{ form.PresenceFeteFamille }}<br>
+<br><hr>
+<input type="submit" class="btn btn-success btn-large" value="C'est tout bon, je valide ma réponse en cliquant ici!" />
+
+
+</div>
+</center>
+	
+{% endblock %}

@@ -1,8 +1,42 @@
 {% extends "base.html" %}
-{% block inscrits %}
+{% block inscrit %}
     class="active"
 {% endblock %}
 
 {% block content %}
-	
+
+<br><br>
+
+<center>
+
+<div style="width:650px;" align=justify>
+
+<h3>Familles présentes aux noces d'or :</h3><br>
+
+<table>
+	<tr><td style='width:200px;'><b>Famille</b></td><td><b>Nombre</b></td></tr>
+	<tr><td>---</td><td></td><tr>
+	{% for famille in liste1 %}
+		<tr><td>{{ famille.FamilyName }}</td><td>{{ famille.NbPersonneFamille }}</td></tr>
+	{% endfor %}
+</table>
+
+<hr>
+
+
+<h3>Familles présentes à la fête familiale :</h3><br>
+
+<table>
+	<tr><td style='width:200px;'><b>Famille</b></td><td><b>Nombre</b></td></tr>
+	<tr><td>---</td><td></td></tr>
+	{% for famille in liste2 %}
+		<tr><td>{{ famille.FamilyName }}</td><td>{{ famille.NbPersonneFamille }}</td></tr>
+	{% endfor %}
+</table>
+<hr>
+<br><br>
+<p> Pour toutes modifications/suggestions, je vous prie de me joindre à l'adresse suivante : <span style="color:orange;"> brunet.adrien@gmail.com </span></p>
+
+</div>
+</center>
 {% endblock %}
