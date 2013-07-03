@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block transport %}
+    class="active"
+{% endblock %}
+
+{% block content %}
+
+<center>
+<br><br>
+<div style='width:950px;' align="justify">
+
+<h3>Voici la liste des demandes qui ont été faites.</h3>
+<table style='border: 1px solid grey;width:100%;text-align:center;'>
+<tr style='border: 1px solid grey;'>
+    <td style='border: 1px solid grey;'><b>Qui?</b></td>
+    <td style='border: 1px solid grey;'><b>Combien?</b></td>
+    <td style='border: 1px solid grey;'><b>Ou?</b></td>
+    <td style='border: 1px solid grey;'><b>Quand?</b></td>
+    <td style='border: 1px solid grey;'><b>Contact</b></td>
+    <td style='border: 1px solid grey;'><b>Remarque</b></td>
+</tr>
+<tr style='border: 1px solid grey;'>
+    <td>---</td>
+    <td>---</td>
+    <td>---</td>
+    <td>---</td>
+    <td>---</td>
+    <td>---</td>
+</tr>
+{%for demande in liste %}
+   <tr style='border: 1px solid grey;'>
+        <td style='border: 1px solid grey;'>{{ demande.Nom }}   </td>
+        <td style='border: 1px solid grey;'>{{ demande.Nombre }}</td>
+        <td style='border: 1px solid grey;'>{{ demande.Ville }} </td>
+        <td style='border: 1px solid grey;'>{{ demande.Date }}  </td>
+        <td style='border: 1px solid grey;'>{{ demande.Contact }}</td>
+        <td style='border: 1px solid grey;'>{{ demande.Remarque }}</td>
+    </tr>
+{% endfor %}
+</table>
+
+ </div>
+ </center>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block transport %}
+    class="active"
+{% endblock %}
+
+{% block content %}
+
+{% load static %}
+<center>
+<br><br>
+<div style='width:800px;' align="center">
+
+<h3>Choisissez la catégorie qui correspond à votre besoin.</h3>
+<a href="/transport/" class="btn btn-warning btn-large"><i class="icon-white icon-road"></i>  Consultez la liste des demandes de transport</a>
+
+ <a href="/asktransport/" class="btn btn-info btn-large"><i class="icon-white icon-plane"></i> Faire une demande d'aide de transport</a>
+<br><br><br><hr><br><br><br>
+<img width='600px' src="{%static 'img/pouce.jpg' %}"/>
+ </div>
+ </center>
+{% endblock %}

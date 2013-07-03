@@ -21,7 +21,7 @@
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js">
       </script>
     <![endif]-->
-    <!-- Le fav and touch icons 
+    <!-- Le fav and touch icons
     <link rel="shortcut icon" href="{% static 'ico/favicon.ico' %}">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{% static 'ico/apple-touch-icon-144-precomposed.png' %}">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="{% static 'ico/apple-touch-icon-114-precomposed.png' %}">
@@ -36,8 +36,8 @@
 <br>
 
     <div class="container">
-       
- 
+
+
       <div class="masthead">
         {# <h3 class="muted">Noces d'or</h3> #}
         <div class="navbar">
@@ -48,6 +48,7 @@
                 <li {% block inscrit %} {% endblock %}><a href="/inscrits/">Les invités</a></li>
                 <li {% block plan %} {% endblock %}><a href="/plan/">Se Rendre à Nouic</a></li>
                 <li {% block nouic %} {% endblock %}><a href="/nouic/">Autour de Nouic / Se loger</a></li>
+                <li {% block transport %}{% endblock %}><a href="/choixtransport">Transport</a></li>
               </ul>
             </div>
           </div>
@@ -87,16 +88,18 @@
       .navbar .nav li:last-child a {
         border-right: 0;
         border-radius: 0 3px 3px 0;
-      }  
+      }
     </style>
     <script src="{% static 'js/bootstrap.js' %}">
     </script>
+
+<div style='height:200px;'>&nbsp</div>
 
 
     <footer>
       <hr>
       <center>
-        <h4 style="color:grey;"><a href="/" >Accueil</a> | Contact Webmaster : abrunet@centrale-marseille.fr</h4>
+        <h4 style="color:grey;"><a href="/" >Accueil</a> | Contact Webmaster : <a href="mailto:brunet.adrien@gmail.com">Contacter Adrien</a></h4>
       </center>
     </footer>
   </body>

@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block transport %}
+    class="active"
+{% endblock %}
+
+{% block content %}
+
+<center>
+<br><br>
+<div style='width:800px;' align="justify">
+
+<h3>Demandez de l'aide via le formulaire suivant! (covoiturage, transfert gare/aeroport-nouic).</h3>
+
+<form action="" method="post">
+{% csrf_token %}
+
+<p>{{ form.as_p }}</p>
+<input type="submit" class="btn btn-success btn-large" value="Valider"/>
+</form>
+
+ </div>
+ </center>
+{% endblock %}
